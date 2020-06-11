@@ -1,0 +1,417 @@
+
+<div class='container'>
+  <!-- button -->
+  <button class='button-1'>Hello</button>
+  <button class='button-2'>Hello</button>
+  <button class='button-3'>Hello</button>
+
+  <!-- ham1 -->
+  <div class='ham1'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <!-- ham2 -->
+  <div class='ham2'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- ham3 -->
+  <div class='ham3'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <!-- domo-1 -->
+  <div class='domo-1'>
+    <img src='kitten-domo.jpg'>
+  </div>
+
+  <!-- domo-2 -->
+  <div class='domo-2'>
+    <img src='kitten-domo.jpg'>
+    <h3> Domo vs Kitten</h3>
+  </div>
+
+  <!-- domo-3 -->
+  <div class='domo-3'>
+    <img src='kitten-domo.jpg'>
+    <h3> Domo vs Kitten</h3>
+    <h2>$5.99</h2>
+  </div>
+</div>
+</div>
+
+
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body, html {
+    height: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-gap: 20px;
+    grid-column-gap: 100px;
+  }
+  /* button */
+  .button-1 {
+    padding: 1rem;
+    margin: 1rem;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    background-color: rgb(63, 113, 206);
+    color: #fff;
+    font-size: 20px;
+    transition: 350ms;
+  }
+  .button-1:hover {
+    background-color: #fff;
+    color: rgb(63, 113, 206);
+  }
+
+  .button-2 {
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    background-color: #fff;
+    color: rgb(63, 113, 206);
+    font-size: 20px;
+    transition: 350ms;
+  }
+  .button-2:hover {
+    border-top: 4px solid;
+    border-bottom: 4px solid;
+    letter-spacing: 0.25rem;
+  }
+
+  .button-3 {
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid rgb(63, 113, 206);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: rgb(63, 113, 206);
+    font-size: 20px;
+    transition: 350ms;
+  }
+  .button-3:hover {
+    background-color: rgb(63, 113, 206);
+    color: #fff;
+  }
+
+  /* ham1 */
+  .ham1{
+      width: 100px;
+      height: 100px;
+      border: solid black;
+      transition: 200ms;
+    }
+    .ham1 > div{
+      width: 60px;
+      height: 20px;
+      background-color: black;
+      position: relative;
+    }
+    .ham1 > :nth-child(1){
+      top: 10px;
+      left: 20px;
+      transition: 200ms;
+    }
+    .ham1 > :nth-child(2){
+      top: 20px;
+      left: 20px;
+      transition: 200ms;
+    } 
+    .ham1 > :nth-child(3){
+      top: 30px;
+      left: 20px;
+      transition: 200ms;
+    } 
+    /* when hovered */
+    .ham1:hover{
+      background-color: black;
+    }
+    .ham1:hover > :nth-child(1){
+      background-color: white;
+      width: 70px;
+      height: 20px;
+      position: relative;
+      transform: rotate(45deg);
+      top: 40px;
+      left: 15px;
+    }
+    .ham1:hover > :nth-child(2){
+      display: none;
+    }
+    .ham1:hover > :nth-child(3){
+      background-color: white;
+      width: 70px;
+      height: 20px;
+      transform: rotate(-45deg);
+      position: relative;
+      top: 20px;
+      left: 15px;
+    }
+
+    /* ham-2 */
+    .ham2{
+      width: 100px;
+      height: 100px;
+      border: solid black;
+      transition: 200ms;
+    }
+    .ham2 > div{
+      width: 60px;
+      height: 10px;
+      background-color: black;
+      position: relative;
+    }
+    .ham2 > :nth-child(1){
+      top: 20px;
+      left: 20px;
+      transform: rotate(0);
+      transition: 200ms;
+    }
+    .ham2 > :nth-child(2){
+      top: 30px;
+      left: 20px;
+      transform: scale(1,1) rotate(0);
+      transition: 200ms;
+    } 
+    .ham2 > :nth-child(3){
+      top: 40px;
+      left: 20px;
+      transform: rotate(0);
+      transition: 200ms;
+    }
+    /* when hovered */
+    .ham2:hover {
+      background-color: black;
+    }
+    .ham2:hover > div{
+      background-color: white;
+    }
+
+    .ham2:hover > div:first-child {
+      width: 5px;
+      height: 35px;
+      left: 27px;
+      /* right: 10px; */
+      top: 20px;
+      transform: rotate(45deg)
+    }
+
+    .ham2:hover > div:nth-child(2) {
+      width: 60px;
+      height: 5px;
+      top: 12px;
+      left: 20px;
+      transform:rotate(0);
+    }
+
+    .ham2:hover > div:last-child {
+      width: 5px;
+      height: 35px;
+      left: 28px;
+      top: 2px;
+      transform: rotate(-45deg);
+  }
+
+    .ham3{
+      width: 100px;
+      height: 100px;
+      border: solid 1px black;
+      transition: 200ms;
+    }
+    .ham3 > div{
+      width: 60px;
+      height: 10px;
+      background-color: black;
+      position: absolute;
+    }
+    .ham3 > :nth-child(1){
+      transform: translate(20px, 25px) rotate(0);
+      transition: 200ms;
+    }
+    .ham3 > :nth-child(2){
+      border: none;
+      border-radius: 0;
+      transform: translate(20px, 45px);
+      transition: 200ms;
+    } 
+    .ham3 > :nth-child(3){
+      transform: translate(20px, 65px) rotate(0);
+      transition: 200ms;
+    } 
+    /* when hovered */
+    .ham3:hover{
+      background-color: black;
+    }
+    .ham3:hover > div{
+      background-color: white;
+    }
+    .ham3:hover > :nth-child(1){
+      width: 50px;
+      transform: translate(25px, 45px) rotate(45deg);
+    }
+    /* change to circle */
+    .ham3:hover > :nth-child(2){
+      width: 60px;
+      height: 60px;
+      border: 10px solid white;
+      border-radius: 50%;
+      background-color: transparent;
+      transform: translate(10px, 10px);
+    }
+    .ham3:hover > :nth-child(3){
+      width: 50px;
+      transform: translate(25px, 45px) rotate(-45deg);
+    }
+
+    /* kitten */
+  .domo-1 {
+    width: 200px;
+    height: 240px;
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .domo-1 > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.75) rotate(0);
+    transition: 600ms;
+    transition-timing-function: ease-in-out; /*speed up and slow down */
+  }
+
+  .domo-1:hover > img {
+    transform: translate(-50%, -50%) scale(1.0) rotate(14deg);
+  }
+
+
+  /* ask Mitchell - positions */
+  /* kitten */
+  .domo-2 {
+    width: 200px;
+    height: 240px;
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .domo-2 > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.75) rotate(0);
+    transition: 600ms;
+    /* transition-timing-function: ease-in-out; speed up and slow down */
+  }
+
+  .domo-2:hover > img {
+    transform: translate(-50%, -50%) scale(1.0) rotate(14deg);
+  }
+
+  .domo-2 > h3 {
+    position: absolute;
+    right: -200px;
+    bottom: 0;
+    background-color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%, 5% 50%); /*gives it an edge*/
+    transition: 600ms;
+    transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);     
+  }
+  .domo-2:hover > h3 {
+    right: -20px;
+  }
+
+
+
+   /* .domo-2 > h3 {
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    right: -20px;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%, 5% 50%); /*gives it an edge*/
+    /* transition: 600ms; */
+    /* transition-delay: 200ms; will wait for the other animation first */
+    /* transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); easeInOutBack */
+  /* }   */
+
+  .domo-3 {
+    width: 200px;
+    height: 240px;
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .domo-3 > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.75) rotate(0);
+    transition: 600ms;
+    /* transition-timing-function: ease-in-out; speed up and slow down */
+  }
+
+  .domo-3:hover > img {
+    transform: translate(-50%, -50%) scale(1.0) rotate(14deg);
+  }
+
+  .domo-3 > h3 {
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    right: -20px;
+    bottom: 0;
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%, 5% 50%); /*gives it an edge*/
+    transition: 600ms;
+    transition-delay: 200ms; /*will wait for the other animation first */
+    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550); /*easeInOutBack */
+   }  
+  .domo-3:hover > h3 {
+    right: -200px;
+  }
+
+  .domo-3 > h2 {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    border: 2px solid lightcoral;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    left: -14px;
+    right: -14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: lightcoral;
+    transform: translate(-100px,-100px) scale(0.5);
+    transition: 400ms;
+    transition-delay: 100ms; /*will wait for the other animation first */
+    transition-timing-function: ease-in-out;
+  }
+
+  .domo-3:hover > h2 {
+    transform: translate(-5px,-5px) scale(1);
+  }
+
+</style>
